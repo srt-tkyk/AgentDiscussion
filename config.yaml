@@ -1,0 +1,20 @@
+anthropic:
+  api_key: "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"
+  model: "claude-3-5-sonnet-20241022"
+
+app:
+  max_turns_default: 3
+  max_turns_extension: 1
+  max_personas: 6
+  min_personas: 2
+  max_file_size_mb: 10
+  language_default: "jp"
+  discussion_style_default: "formal"
+  log_level: "INFO"
+
+paths:
+  discussions_dir: "data/discussions"
+  personas_dir: "data/personas"
+  materials_dir: "data/materials"
+  exports_dir: "exports"
+  logs_dir: "logs"
