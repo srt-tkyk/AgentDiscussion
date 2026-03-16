@@ -195,3 +195,57 @@ This is a single-user personal tool, so simplicity and usability are priorities 
 **Context**: Functional Design stage - Plan created for Core Application unit, awaiting user input
 
 ---
+
+## Functional Design - Answers Received
+**Timestamp**: 2026-03-16T15:04:07.645+09:00
+**User Input**: "Done"
+**AI Response**: Read all 14 answers from core-application-functional-design-plan.md. No ambiguities detected. Answers: Q1=A (state machine), Q2=C (user-guided validation), Q3=D (AI preprocessing), Q4=B (rich domain model), Q5=A (simple persona model), Q6=A (linear discussion), Q7=A (basic validation), Q8=B (soft limits), Q9=A (simple file ops), Q10=B (multi-page), Q11=A (session state), Q12=B (structured message display), Q13=B (async callbacks), Q14=A (simple error display with retry). Generated 4 artifacts: business-logic-model.md, domain-entities.md, business-rules.md, frontend-components.md.
+**Context**: Functional Design stage - Generation complete, presenting completion message for approval
+
+---
+
+## Functional Design - User Approval
+**Timestamp**: 2026-03-16T15:11:40.036+09:00
+**User Input**: "Lets proceed"
+**AI Response**: Functional Design approved. Updating aidlc-state.md and proceeding to NFR Requirements stage.
+**Context**: Functional Design stage approved, moving to NFR Requirements
+
+---
+
+## NFR Requirements - Plan Created
+**Timestamp**: 2026-03-16T15:11:40.036+09:00
+**AI Response**: NFR Requirements plan created with 10 questions covering performance (Q1-Q2), reliability (Q3-Q4), security (Q5-Q6), tech stack (Q7-Q9), and maintainability (Q10). Saved to aidlc-docs/construction/plans/core-application-nfr-requirements-plan.md.
+**Context**: NFR Requirements stage - Plan created, awaiting user answers
+
+---
+
+## NFR Requirements - Answers Received
+**Timestamp**: 2026-03-16T15:26:23.990+09:00
+**User Input**: "done"
+**AI Response**: Read all 10 answers. Q1=D (no strict latency), Q2=C (partial — scrolling enabled, controls disabled), Q3=D (save + resume), Q4=A (validate on startup), Q5=B (config.yaml only), Q6=A (auto .gitignore), Q7=A (Python 3.9+), Q8=A (PyMuPDF), Q9=A (python-docx), Q10=A (rotating log file). No ambiguities. Generated nfr-requirements.md and tech-stack-decisions.md.
+**Context**: NFR Requirements stage - Generation complete, presenting completion message for approval
+
+---
+
+## NFR Requirements - User Approval
+**Timestamp**: 2026-03-16T15:28:19.644+09:00
+**User Input**: "Lets proceed"
+**AI Response**: NFR Requirements approved. Updating aidlc-state.md and proceeding to NFR Design stage.
+**Context**: NFR Requirements stage approved, moving to NFR Design
+
+---
+
+## NFR Design - Plan Created
+**Timestamp**: 2026-03-16T15:28:19.644+09:00
+**AI Response**: NFR Design plan created with 2 targeted questions: Q1 (resume point storage strategy) and Q2 (startup validation call type). Saved to aidlc-docs/construction/plans/core-application-nfr-design-plan.md.
+**Context**: NFR Design stage - Plan created, awaiting user answers
+
+---
+
+## NFR Design - Answers Received & Generation Complete
+**Timestamp**: 2026-03-16T15:30:42.524+09:00
+**User Input**: "done"
+**AI Response**: Read answers: Q1=C (both session state + JSON for cross-session resume), Q2=A (client.models.list()). No ambiguities. Generated nfr-design-patterns.md (4 patterns: checkpoint-resume, config/gitignore/API validation, streaming passthrough, logging) and logical-components.md (4 new components: ApiValidator, LoggingConfig, ResumeManager, enhanced ConfigurationManager; 3 modified components).
+**Context**: NFR Design stage - Generation complete, presenting completion message for approval
+
+---

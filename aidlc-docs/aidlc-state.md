@@ -38,8 +38,8 @@
 - [x] Units Generation (COMPLETED - 2026-03-13T14:15:44.999+09:00)
 
 ### CONSTRUCTION PHASE
-- [ ] Functional Design (EXECUTE)
-- [ ] NFR Requirements (EXECUTE)
+- [x] Functional Design (COMPLETED - 2026-03-16T15:11:40.036+09:00)
+- [x] NFR Requirements (COMPLETED - 2026-03-16T15:28:19.644+09:00)
 - [ ] NFR Design (EXECUTE)
 - [ ] Infrastructure Design (SKIP)
 - [ ] Code Planning (EXECUTE)
