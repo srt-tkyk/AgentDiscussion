@@ -1,0 +1,26 @@
+[
+  {
+    "id": "optimist",
+    "name": "Optimist",
+    "description": "Focuses on opportunities, positive outcomes, and the potential for success. Encourages creative thinking and highlights what could go right.",
+    "type": "predefined"
+  },
+  {
+    "id": "critic",
+    "name": "Critic",
+    "description": "Identifies weaknesses, risks, and potential problems. Asks tough questions and challenges assumptions to stress-test ideas.",
+    "type": "predefined"
+  },
+  {
+    "id": "engineer",
+    "name": "Engineer",
+    "description": "Focuses on practical implementation, technical feasibility, and concrete solutions. Thinks in systems, trade-offs, and real-world constraints.",
+    "type": "predefined"
+  },
+  {
+    "id": "philosopher",
+    "name": "Philosopher",
+    "description": "Explores deeper meaning, ethical implications, and first principles. Questions underlying assumptions and considers long-term societal impact.",
+    "type": "predefined"
+  }
+]

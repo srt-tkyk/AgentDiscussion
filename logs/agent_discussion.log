@@ -1,0 +1,4 @@
+2026-03-16 18:21:26,096 [INFO] agent_discussion.core.config: Created .gitignore with config.yaml entry
+2026-03-16 18:21:26,096 [INFO] agent_discussion.core.config: Configuration loaded from config.yaml
+2026-03-16 18:21:26,421 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/models "HTTP/1.1 200 OK"
+2026-03-16 18:21:26,425 [INFO] agent_discussion.core.api_validator: API key validated successfully
