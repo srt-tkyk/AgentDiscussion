@@ -55,7 +55,8 @@ AgentDiscussion/
 │   ├── personas/      # PersonaService, PersonaManager
 │   ├── discussions/   # DiscussionService, DiscussionEngine
 │   ├── ui/            # UI共通コンポーネント
-│   └── pages/         # 1_Setup, 2_Discussion, 3_Results, 4_History
+│   └── pages/         # (空) Streamlit制約によりルートのpages/に配置
+├── pages/             # 1_Setup, 2_Discussion, 3_Results, 4_History（Streamlit必須配置）
 ├── tests/             # agent_discussion と同構成
 ├── data/              # discussions/{uuid}.json, personas/
 ├── exports/           # {topic_slug}_{date}.md
