@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git -C /home/t.shirota/workspace/AgentDiscussion branch -a)",
-      "Bash(find /home/t.shirota/workspace/AgentDiscussion -name *.py -not -path */.venv/* -not -path */site-packages/*)",
-      "Bash(poetry run:*)"
-    ]
-  }
-}
