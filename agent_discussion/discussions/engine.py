@@ -12,15 +12,23 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 _DEFAULT_MODEL = "claude-3-5-sonnet-20241022"
-_MAX_TOKENS = 1024
+_DEFAULT_MAX_TOKENS = 4096
 
 
 class DiscussionEngine:
     """Generates streaming responses from Claude for each persona turn."""
 
-    def __init__(self, api_key: str, model: str = _DEFAULT_MODEL) -> None:
+    def __init__(
+        self,
+        api_key: str,
+        model: str = _DEFAULT_MODEL,
+        max_tokens: int = _DEFAULT_MAX_TOKENS,
+        max_response_chars: int = 500,
+    ) -> None:
         self._client = anthropic.Anthropic(api_key=api_key)
         self._model = model
+        self._max_tokens = max_tokens
+        self._max_response_chars = max_response_chars
 
     def stream_response(
         self, persona: "Persona", context: dict
@@ -42,7 +50,7 @@ class DiscussionEngine:
 
         with self._client.messages.stream(
             model=self._model,
-            max_tokens=_MAX_TOKENS,
+            max_tokens=self._max_tokens,
             system=system_prompt,
             messages=[{"role": "user", "content": user_message}],
         ) as stream:
@@ -54,6 +62,7 @@ class DiscussionEngine:
             f"You are {persona.name}. {persona.description}",
             f"Engage in a {context['style']} discussion in {context['language']}.",
             "Stay in character. Contribute meaningfully to the conversation.",
+            f"Keep your response within {self._max_response_chars} characters.",
         ]
         if context.get("materials"):
             parts.append(f"\nReference material:\n{context['materials']}")

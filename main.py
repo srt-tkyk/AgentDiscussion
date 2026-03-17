@@ -67,6 +67,8 @@ def _init() -> None:
     engine = DiscussionEngine(
         api_key=config.get_api_key(),
         model=config.get("anthropic", "model", default="claude-3-5-sonnet-20241022"),
+        max_tokens=config.get("anthropic", "max_tokens", default=4096),
+        max_response_chars=config.get("anthropic", "max_response_chars", default=500),
     )
     ds = DiscussionService(fm, ps, rm, engine)
 
