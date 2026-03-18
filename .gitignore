@@ -3,3 +3,8 @@ CLAUDE.md
 
 .kiro/
 .claude/
+
+# ローカルのみ保管
+logs/
+data/discussions/
+exports/
