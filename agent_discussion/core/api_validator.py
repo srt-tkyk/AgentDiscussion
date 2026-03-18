@@ -16,7 +16,7 @@ class ApiValidator:
     def validate(self, api_key: str) -> ApiValidationResult:
         """Return ApiValidationResult indicating whether the key is valid."""
         try:
-            client = anthropic.Anthropic(api_key=api_key)
+            client = anthropic.Anthropic(api_key=api_key, timeout=10.0)
             client.models.list()
             logger.info("API key validated successfully")
             return ApiValidationResult(valid=True)
