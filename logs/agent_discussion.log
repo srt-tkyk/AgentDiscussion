@@ -40,3 +40,33 @@
 2026-03-16 19:12:50,553 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-03-16 19:13:02,615 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-03-16 19:13:15,360 [INFO] agent_discussion.discussions.service: Discussion 8a83687b-8c08-46bf-a550-2d8d2f0509ff completed (3 turns)
+2026-03-17 20:04:24,439 [INFO] agent_discussion.core.config: Configuration loaded from config.yaml
+2026-03-17 20:04:24,761 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/models "HTTP/1.1 200 OK"
+2026-03-17 20:04:24,765 [INFO] agent_discussion.core.api_validator: API key validated successfully
+2026-03-17 20:21:07,758 [INFO] agent_discussion.discussions.service: Discussion 30153338-4856-44d4-acf3-77e83d54f2f9 created: 株式会社エイシングってどう？イケてる？
+2026-03-17 20:21:08,013 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-03-17 20:21:08,014 [ERROR] agent_discussion.discussions.service: API failure at turn 1, persona optimist: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CZ8ZfNTwmtfSnMqpuTwkm'}
+2026-03-17 20:21:08,016 [ERROR] agent_discussion.core.resume_manager: Resume point set at turn 1, persona index 0: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CZ8ZfNTwmtfSnMqpuTwkm'}
+2026-03-17 20:24:18,525 [INFO] agent_discussion.core.config: Configuration loaded from config.yaml
+2026-03-17 20:24:19,010 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/models "HTTP/1.1 200 OK"
+2026-03-17 20:24:19,013 [INFO] agent_discussion.core.api_validator: API key validated successfully
+2026-03-17 20:24:48,986 [INFO] agent_discussion.discussions.service: Discussion cb6b45e0-c0aa-4c23-a4c5-134ca0617bb6 created: 株式会社エイシングってどう？イケてる？
+2026-03-17 20:24:49,582 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:24:54,884 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:24:59,595 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:05,854 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:11,023 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:17,288 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:23,665 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:30,320 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:37,858 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:45,027 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:52,613 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:25:58,321 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:26:04,853 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:26:09,733 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:26:16,917 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:26:23,036 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-17 20:26:23,037 [INFO] anthropic._base_client: Retrying request to /v1/messages in 9.000000 seconds
+2026-03-17 20:26:32,710 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 20:26:38,848 [INFO] agent_discussion.discussions.service: Discussion cb6b45e0-c0aa-4c23-a4c5-134ca0617bb6 completed (4 turns)
