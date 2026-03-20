@@ -4,6 +4,12 @@ CLAUDE.md
 .kiro/
 .claude/
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
 # ローカルのみ保管
 logs/
 data/discussions/
