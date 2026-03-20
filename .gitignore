@@ -7,4 +7,5 @@ CLAUDE.md
 # ローカルのみ保管
 logs/
 data/discussions/
+data/personas/custom/
 exports/

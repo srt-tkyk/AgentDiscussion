@@ -83,6 +83,35 @@ if state in ("configuring", "setup"):
             else:
                 render_validation_errors(result.errors)
 
+    custom_personas = [p for p in all_personas if p.type == "custom"]
+    if custom_personas:
+        with st.expander("✏️ Manage Custom Personas"):
+            for cp in custom_personas:
+                st.markdown(f"**{cp.name}**")
+                edit_name = st.text_input(
+                    "Name", value=cp.name, max_chars=100, key=f"edit_name_{cp.id}"
+                )
+                edit_desc = st.text_area(
+                    "Description", value=cp.description, max_chars=500, key=f"edit_desc_{cp.id}"
+                )
+                col_save, col_del = st.columns([1, 1])
+                with col_save:
+                    if st.button("Save", key=f"edit_save_{cp.id}"):
+                        _, result = persona_svc.update_custom_persona(cp.id, edit_name, edit_desc)
+                        if result.valid:
+                            st.success(f"'{edit_name}' updated.")
+                            st.rerun()
+                        else:
+                            render_validation_errors(result.errors)
+                with col_del:
+                    if st.button("Delete", key=f"edit_del_{cp.id}", type="secondary"):
+                        persona_svc.delete_custom_persona(cp.id)
+                        if cp.id in selected_ids:
+                            selected_ids.remove(cp.id)
+                            st.session_state[KEY_SELECTED_PERSONA_IDS] = selected_ids
+                        st.rerun()
+                st.divider()
+
     st.subheader("Parameters")
     col1, col2, col3 = st.columns(3)
     with col1:

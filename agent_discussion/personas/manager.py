@@ -56,6 +56,20 @@ class PersonaManager:
         logger.info("Created custom persona: %s", slug)
         return persona
 
+    def update_custom_persona(self, persona_id: str, name: str, description: str) -> Persona:
+        """Update name/description of an existing custom persona."""
+        existing = self.get_persona_by_id(persona_id)
+        persona = Persona(
+            id=persona_id,
+            name=name,
+            description=description,
+            type="custom",
+            created_at=existing.created_at if existing else datetime.now(),
+        )
+        self._fm.save_custom_persona(persona)
+        logger.info("Updated custom persona: %s", persona_id)
+        return persona
+
     def delete_custom_persona(self, persona_id: str) -> None:
         """Remove a custom persona by ID."""
         self._fm.delete_custom_persona(persona_id)

@@ -67,6 +67,28 @@ class PersonaService:
         persona = self._manager.create_custom_persona(name.strip(), description.strip())
         return persona, ValidationResult(valid=True)
 
+    def update_custom_persona(
+        self, persona_id: str, name: str, description: str
+    ) -> Tuple[Optional[Persona], ValidationResult]:
+        """Validate and update an existing custom persona."""
+        errors: List[str] = []
+        if not name or not name.strip():
+            errors.append("Persona name is required.")
+        elif len(name) > 100:
+            errors.append("Persona name must be 100 characters or fewer.")
+        if not description or not description.strip():
+            errors.append("Persona description is required.")
+        elif len(description) > 500:
+            errors.append("Persona description must be 500 characters or fewer.")
+
+        if errors:
+            return None, ValidationResult(valid=False, errors=errors)
+
+        persona = self._manager.update_custom_persona(
+            persona_id, name.strip(), description.strip()
+        )
+        return persona, ValidationResult(valid=True)
+
     def delete_custom_persona(self, persona_id: str) -> None:
         """Remove a custom persona."""
         self._manager.delete_custom_persona(persona_id)
